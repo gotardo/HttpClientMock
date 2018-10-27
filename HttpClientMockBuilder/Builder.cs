@@ -61,14 +61,14 @@
         }
 
         /// inheritdoc
-        public IHttpClientMockBuilder WithContentType(string contentType)
+        public IResponseHeaderConfigurable WithContentType(string contentType)
         {
             this.ResponseMessage.Content.Headers.ContentType = new MediaTypeHeaderValue(contentType);
             return this;
         }
 
         /// inheritdoc
-        public IHttpClientMockBuilder WithResponseHeader(string name, string value)
+        public IResponseHeaderConfigurable WithResponseHeader(string name, string value)
         {
             this.ResponseMessage.Content.Headers.Add(name, value);
             return this;
